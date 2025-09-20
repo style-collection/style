@@ -1,4 +1,4 @@
-import { Hero } from "@/components/Hero";
+import { BackgroundRemovalHero } from "@/components/BackgroundRemovalHero";
 import { ProductCard } from "@/components/ProductCard";
 import { CategoryCard } from "@/components/CategoryCard";
 import { Button } from "@/components/ui/button";
@@ -107,7 +107,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <Hero />
+      <BackgroundRemovalHero />
 
       {/* Features Section */}
       <section className="py-16 bg-cream">
