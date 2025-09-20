@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, ArrowRight, Truck, Shield, RotateCcw, Heart } from "lucide-react";
+import luxurySilkBlouse from "@/assets/luxury-silk-blouse.jpg";
 
 // Mock data for featured products
 const featuredProducts = [
@@ -25,7 +26,7 @@ const featuredProducts = [
     id: "2",
     name: "Luxury Silk Blouse",
     price: 899,
-    image: "https://images.unsplash.com/photo-1564257577322-d84f6ed7c62a?w=600&h=800&fit=crop",
+    image: luxurySilkBlouse,
     category: "Tops",
     colors: ["#FFFFFF", "#F5F5DC", "#FFB6C1"],
     sizes: ["S", "M", "L"],
