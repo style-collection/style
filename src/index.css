@@ -2,39 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Style Collection - Elegant Fashion E-commerce Design System
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Brand Colors - Elegant burgundy and rose gold palette */
+    --background: 35 20% 98%;
+    --foreground: 15 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 15 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 15 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Deep burgundy for elegance */
+    --primary: 345 65% 35%;
+    --primary-foreground: 35 20% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Rose gold accents */
+    --secondary: 25 45% 85%;
+    --secondary-foreground: 345 65% 35%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Soft cream tones */
+    --muted: 35 30% 95%;
+    --muted-foreground: 15 25% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Warm rose gold */
+    --accent: 25 60% 75%;
+    --accent-foreground: 345 65% 35%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 35 20% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 20% 88%;
+    --input: 35 20% 92%;
+    --ring: 345 65% 35%;
+
+    /* Custom brand tokens */
+    --luxury: 345 80% 25%;
+    --luxury-foreground: 35 20% 98%;
+    --rose-gold: 25 70% 65%;
+    --cream: 35 40% 96%;
+    --charcoal: 15 20% 25%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(345 65% 35% / 0.95), hsl(25 60% 45% / 0.85));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(35 30% 98%));
+    --gradient-accent: linear-gradient(90deg, hsl(25 60% 75%), hsl(25 70% 65%));
+
+    /* Shadows */
+    --shadow-elegant: 0 4px 20px hsl(345 65% 35% / 0.08);
+    --shadow-luxury: 0 8px 32px hsl(345 65% 35% / 0.12);
+    --shadow-card: 0 2px 16px hsl(15 15% 15% / 0.04);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-elegant: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 
     --radius: 0.5rem;
 
@@ -101,5 +127,115 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  /* Hero Section Styles */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+
+  .accent-gradient {
+    background: var(--gradient-accent);
+  }
+
+  /* Custom animations */
+  .hover-lift {
+    transition: var(--transition-elegant);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-luxury);
+  }
+
+  .fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+
+  .slide-up {
+    animation: slide-up 0.8s ease-out;
+  }
+
+  /* Product card animations */
+  .product-card {
+    transition: var(--transition-elegant);
+    box-shadow: var(--shadow-card);
+  }
+
+  .product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elegant);
+  }
+}
+
+@layer utilities {
+  .text-luxury {
+    color: hsl(var(--luxury));
+  }
+
+  .text-rose-gold {
+    color: hsl(var(--rose-gold));
+  }
+
+  .text-charcoal {
+    color: hsl(var(--charcoal));
+  }
+
+  .bg-luxury {
+    background-color: hsl(var(--luxury));
+  }
+
+  .bg-rose-gold {
+    background-color: hsl(var(--rose-gold));
+  }
+
+  .bg-cream {
+    background-color: hsl(var(--cream));
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-luxury {
+    box-shadow: var(--shadow-luxury);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+}
+
+/* Keyframes */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
