@@ -1,11 +1,10 @@
-import { BackgroundRemovalHero } from "@/components/BackgroundRemovalHero";
+import { Hero } from "@/components/Hero";
 import { ProductCard } from "@/components/ProductCard";
 import { CategoryCard } from "@/components/CategoryCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, ArrowRight, Truck, Shield, RotateCcw, Heart } from "lucide-react";
-import luxurySilkBlouse from "@/assets/luxury-silk-blouse.jpg";
 
 // Mock data for featured products
 const featuredProducts = [
@@ -26,7 +25,7 @@ const featuredProducts = [
     id: "2",
     name: "Luxury Silk Blouse",
     price: 899,
-    image: luxurySilkBlouse,
+    image: "https://images.unsplash.com/photo-1564257577322-d84f6ed7c62a?w=600&h=800&fit=crop",
     category: "Tops",
     colors: ["#FFFFFF", "#F5F5DC", "#FFB6C1"],
     sizes: ["S", "M", "L"],
@@ -107,7 +106,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <BackgroundRemovalHero />
+      <Hero />
 
       {/* Features Section */}
       <section className="py-16 bg-cream">

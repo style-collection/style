@@ -21,7 +21,7 @@ export const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
             <Star className="h-4 w-4 text-rose-gold fill-current" />
-            <span className="text-sm font-medium">Exclusive Collection</span>
+            <span className="text-sm font-medium">Premium Collection 2024</span>
           </div>
 
           {/* Heading */}
