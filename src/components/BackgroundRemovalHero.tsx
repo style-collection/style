@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, Loader2 } from "lucide-react";
-import heroImage from "@/assets/hero-fashion.jpg";
+import heroImage from "@/assets/modest-woman-hero.jpg";
 import { removeBackground, loadImageFromSrc } from "@/utils/backgroundRemoval";
 
 export const BackgroundRemovalHero = () => {
@@ -28,8 +28,8 @@ export const BackgroundRemovalHero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-luxury via-luxury-variant to-rose-gold"></div>
+      {/* Background with new color palette */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-blue-900 to-purple-800"></div>
       
       {/* Processed Image or Loading */}
       <div className="absolute inset-0 flex items-center justify-end pr-8">
@@ -58,27 +58,27 @@ export const BackgroundRemovalHero = () => {
         <div className="fade-in">
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-            <Star className="h-4 w-4 text-rose-gold fill-current" />
-            <span className="text-sm font-medium">Exclusive Collection</span>
+            <Star className="h-4 w-4 text-blue-300 fill-current" />
+            <span className="text-sm font-medium">Modest Elegance Collection</span>
           </div>
 
           {/* Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-serif font-bold mb-6 leading-tight">
-            Elegance
-            <span className="block text-rose-gold">Redefined</span>
+            Modest
+            <span className="block text-blue-300">Fashion</span>
           </h1>
 
           {/* Subheading */}
           <p className="text-lg sm:text-xl lg:text-2xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Discover our curated collection of premium women's fashion, 
-            accessories, and shoes that celebrate your unique style.
+            Discover our curated collection of modest yet elegant women's fashion, 
+            designed for the modern woman who values style and sophistication.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
-              className="bg-white text-luxury hover:bg-white/90 shadow-luxury group px-8 py-3 text-lg font-semibold"
+              className="bg-white text-slate-800 hover:bg-blue-50 shadow-lg group px-8 py-3 text-lg font-semibold"
             >
               Shop Collection
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -96,15 +96,15 @@ export const BackgroundRemovalHero = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-white/20">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-rose-gold">500+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-blue-300">500+</div>
               <p className="text-sm text-white/80 mt-1">Premium Products</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-rose-gold">50K+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-blue-300">50K+</div>
               <p className="text-sm text-white/80 mt-1">Happy Customers</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-rose-gold">4.9★</div>
+              <div className="text-2xl sm:text-3xl font-bold text-blue-300">4.9★</div>
               <p className="text-sm text-white/80 mt-1">Customer Rating</p>
             </div>
           </div>
